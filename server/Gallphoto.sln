@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallphoto.WebApp", "Gallphoto.WebApp\Gallphoto.WebApp.csproj", "{1B0B47BA-FF1E-4705-8DA0-580BB9D0A0AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gallphoto.Infrastructure", "Gallphoto.Infrastructure\Gallphoto.Infrastructure.csproj", "{A59D2674-E54C-4CA8-8EFD-21347E089A25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B0B47BA-FF1E-4705-8DA0-580BB9D0A0AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B0B47BA-FF1E-4705-8DA0-580BB9D0A0AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B0B47BA-FF1E-4705-8DA0-580BB9D0A0AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B0B47BA-FF1E-4705-8DA0-580BB9D0A0AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59D2674-E54C-4CA8-8EFD-21347E089A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59D2674-E54C-4CA8-8EFD-21347E089A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59D2674-E54C-4CA8-8EFD-21347E089A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59D2674-E54C-4CA8-8EFD-21347E089A25}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
