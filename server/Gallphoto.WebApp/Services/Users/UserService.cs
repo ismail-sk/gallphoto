@@ -13,11 +13,12 @@ namespace Gallphoto.WebApp.Services.Users;
 public class UserService : IUserService
 {
     // users hardcoded for simplicity, store in a db with hashed passwords in production applications
-    private List<User> _users = new()
+    
+    private static List<User> _users = new()
     {
         new User
         {
-            Id = 1,
+            Id = Guid.NewGuid(),
             FirstName = "Sehitcan",
             LastName = "Kutel",
             Username = "test",
@@ -45,12 +46,35 @@ public class UserService : IUserService
         return new AuthenticateResponse(user, token);
     }
 
+    public (User,string err) RegisterNewUser(RegisterNewUserRequest model)
+    {
+        var existUser = _users.FirstOrDefault(x => x.Username.Equals(model.Username.Trim(), StringComparison.CurrentCultureIgnoreCase));
+
+        if (existUser is not null)
+        {
+            return (null, $"Username = {existUser.Username} already possessed by another user.");
+        }
+        
+        var newUser = new User()
+        {
+            Id = Guid.NewGuid(),
+            FirstName = model.FirstName.Trim(),
+            LastName = model.LastName.Trim(),
+            Username = model.Username.Trim(),
+            Password = model.Password.Trim()
+        };
+        
+        _users.Add(newUser);
+
+        return (newUser, null);
+    }
+    
     public IEnumerable<User> GetAll()
     {
         return _users;
     }
 
-    public User GetById(int id)
+    public User GetById(Guid id)
     {
         return _users.FirstOrDefault(x => x.Id == id);
     }
